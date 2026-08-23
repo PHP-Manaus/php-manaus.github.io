@@ -66,6 +66,7 @@
 						<a class="nav-link link text-white text-primary display-4" href="#rede">Redes Sociais</a>
 					</li><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="#apoio">Apoie-nos</a></li>
 					<li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="#vagas">Divulgar uma Vaga</a></li>
+					<li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="#parceiros">Parceiros</a></li>
 				<li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="#contato">Contato</a></li></ul>
 				
 				
@@ -505,6 +506,121 @@
   </div>
 	</div>
 </section>
+
+<!-- ======= SECTION COMUNIDADES PARCEIRAS ======= -->
+<section data-bs-version="5.1" id="parceiros">
+  <div class="container">
+
+    <div class="row justify-content-center text-center mb-2">
+      <div class="col-12">
+        <p class="ev-eyebrow">// Quem caminha com a gente</p>
+        <h1 class="mbr-section-title mbr-fonts-style display-2">
+          <strong>COMUNIDADES PARCEIRAS</strong>
+        </h1>
+        <div class="ev-bar"></div>
+        <p class="ev-subtitle">Comunidades e coletivos de tecnologia que constroem junto com a PHP Manaus</p>
+      </div>
+    </div>
+
+    <div class="pc-slider">
+      <button type="button" class="pc-arrow pc-arrow-prev" aria-label="Parceiro anterior">&#10094;</button>
+
+      <div class="pc-track" id="pcTrack">
+
+        <div class="pc-slide">
+          <a class="pc-card" href="https://javaamazonas.com.br/" target="_blank">
+            <div class="pc-logo">
+              <img src="./assets/images/parceiros/java_logo.png" alt="comunidade java amazonas">
+            </div>
+            <h5 class="pc-name">Java Amazonas</h5>
+            <p class="pc-desc">A comunidade foi criada com o intuito de promover a linguagem de programação Java no Amazonas.</p>
+            <span class="pc-link">Visitar</span>
+          </a>
+        </div>
+
+        <div class="pc-slide">
+          <a class="pc-card" href="https://manastech.com.br/" target="_blank">
+            <div class="pc-logo">
+              <img src="./assets/images/parceiros/manas_tech.png" alt="Logo da comunidade Manaus Tech">
+            </div>
+            <h5 class="pc-name">Manas Tech</h5>
+            <p class="pc-desc">Capacitamos mulheres com educação, mentoria e oportunidades reais em tecnologia.</p>
+            <span class="pc-link">Visitar</span>
+          </a>
+        </div>
+
+        <div class="pc-slide">
+          <a class="pc-card" href="https://nortejs.js.org/" target="_blank">
+            <div class="pc-logo">
+              <img src="./assets/images/parceiros/logo-nortejs.png" alt="Logo da comunidade NorteJS">
+            </div>
+            <h5 class="pc-name">NorteJS</h5>
+            <p class="pc-desc">Comunidade aberta para desenvolvedores e entusiastas de JavaScript no Norte</p>
+            <span class="pc-link">Visitar</span>
+          </a>
+        </div>
+
+        <div class="pc-slide">
+          <a class="pc-card" href="https://phpbelem.com.br/" target="_blank">
+            <div class="pc-logo">
+              <img src="./assets/images/parceiros/php_belem.png" alt="Logo da comunidade PHP Belém">
+            </div>
+            <h5 class="pc-name">PHP Belém</h5>
+            <p class="pc-desc">Uma comunidade vibrante para compartilhar conhecimento, fortalecer o ecossistema PHP local</p>
+            <span class="pc-link">Visitar</span>
+          </a>
+        </div>
+
+        <div class="pc-slide">
+          <a class="pc-card" href="https://www.instagram.com/devopsmanaus/" target="_blank">
+            <div class="pc-logo">
+              <img src="./assets/images/parceiros/Logo DevOps Manaus - Completo com Texto.png" alt="Logo da comunidade DevOps Manaus">
+            </div>
+            <h5 class="pc-name">DevOps Manaus</h5>
+            <p class="pc-desc">Comunidade que reúne profissionais e entusiastas de DevOps para trocar experiências e boas práticas.</p>
+            <span class="pc-link">Visitar</span>
+          </a>
+        </div>
+
+        <div class="pc-slide">
+          <a class="pc-card" href="https://www.instagram.com/pyladiesmanaus/" target="_blank">
+            <div class="pc-logo">
+              <img src="./assets/images/parceiros/pyladies_manaus.png" alt="Logo da comunidade PyLadies Manaus">
+            </div>
+            <h5 class="pc-name">PyLadies Manaus</h5>
+            <p class="pc-desc">Grupo dedicado a incentivar e apoiar mulheres na comunidade de programação Python.</p>
+            <span class="pc-link">Visitar</span>
+          </a>
+        </div>
+
+      </div> <!-- /pc-track -->
+
+      <button type="button" class="pc-arrow pc-arrow-next" aria-label="Próximo parceiro">&#10095;</button>
+    </div> <!-- /pc-slider -->
+
+  </div> <!-- /container -->
+</section>
+<!-- ======= FIM SECTION COMUNIDADES PARCEIRAS ======= -->
+
+<script>
+  (function () {
+    var track = document.getElementById('pcTrack');
+    var prevBtn = document.querySelector('.pc-arrow-prev');
+    var nextBtn = document.querySelector('.pc-arrow-next');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    function scrollByCard(direction) {
+      var slide = track.querySelector('.pc-slide');
+      if (!slide) return;
+      var gap = Number.parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 24);
+      var amount = (slide.getBoundingClientRect().width + gap) * direction;
+      track.scrollBy({ left: amount, behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+    nextBtn.addEventListener('click', function () { scrollByCard(1); });
+  })();
+</script>
 
 <section data-bs-version="5.1" class="form5 cid-tJS9pBcTSa" id="contato">
     
